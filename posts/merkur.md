@@ -6,12 +6,6 @@ tags:
   - commercial
 imageUrl: /img/merkur.jpg
 vimeoVideoId: 162760816
-pagination:
-  data: tags
-  size: 1
-  alias: tag
-  permalink: /{{ tag }}/{{ title | slugify }}
-  addAllPagesToCollections: true
 ---
 
 # Merkur “More Than You Expect”

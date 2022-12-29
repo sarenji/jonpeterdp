@@ -1,3 +1,10 @@
 {
-    "layout": "layouts/post.njk"
-  }
+    "layout": "layouts/post.njk",
+    "pagination": {
+        "data": "tags",
+        "size": 1,
+        "alias": "tag",
+        "addAllPagesToCollections": true
+    },
+    "permalink": "/{{ tag }}/{{ title | slugify }}/index.html"
+}
