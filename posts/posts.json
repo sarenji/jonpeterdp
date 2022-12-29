@@ -3,8 +3,7 @@
     "pagination": {
         "data": "tags",
         "size": 1,
-        "alias": "tag",
-        "addAllPagesToCollections": true
+        "alias": "tag"
     },
     "permalink": "/{{ tag }}/{{ title | slugify }}/index.html"
 }
