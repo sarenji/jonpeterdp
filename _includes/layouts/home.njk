@@ -1,0 +1,21 @@
+---
+title: Jon Peter. Director of Photography
+layout: layouts/base.njk
+---
+
+<header>
+    <div class="logo"><a href="/">JON PETER</a></div>
+    <nav aria-label="Main navigation">
+        {% set currentUrl = page.url %}
+        <ul class="main-nav">
+            <li><a {% if currentUrl === '/' %}aria-current="true"{% endif %} href="/">Featured</a></li>
+            <li><a {% if currentUrl === '/commercial/' %}aria-current="true"{% endif %} href="/commercial/">Commercial</a></li>
+            <li><a {% if currentUrl === '/narrative/' %}aria-current="true"{% endif %} href="/narrative/">Narrative</a></li>
+            <li><a {% if currentUrl === '/music-video/' %}aria-current="true"{% endif %} href="/music-video/">Music Video</a></li>
+            <li><a {% if currentUrl === '/contact/' %}aria-current="true"{% endif %} href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+  {{ content | safe }}
+</main>

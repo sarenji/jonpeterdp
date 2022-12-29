@@ -1,0 +1,15 @@
+---
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /{{ tag | slugify }}/
+layout: layouts/home.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+  addAllPagesToCollections: true
+---
+
+{% include "tagList.njk" %}

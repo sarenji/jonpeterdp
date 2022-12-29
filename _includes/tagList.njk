@@ -1,0 +1,17 @@
+{% for post in collections[tag] %}
+  <div class="cover-photo">
+    <div class="cover-photo--overflow">
+        <img alt="" src="{{ post.data.imageUrl }}" />
+    </div>
+    <a class="cover-photo--text" href="{{ post.url }}">
+        <span>
+            {{ post.data.title }}
+            {% if post.data.subtitle %}
+            <span class="cover-photo--subtitle">
+                {{ post.data.subtitle }}
+            </span>
+            {% endif %}
+        </span>
+    </a>
+  </div>
+{% endfor %}
