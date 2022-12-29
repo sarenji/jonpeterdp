@@ -59,6 +59,8 @@ img {
 
 .cover-photo {
   position: relative;
+  max-width: 70rem;
+  margin: 0 auto;
 }
 
 .cover-photo + .cover-photo {
