@@ -5,5 +5,5 @@
         "size": 1,
         "alias": "tag"
     },
-    "permalink": "/{{ tag }}/{{ title | slugify }}/index.html"
+    "permalink": "/{{ tag | slugify }}/{{ title | slugify }}/index.html"
 }
