@@ -20,7 +20,12 @@ collections:
           default: "layouts/post.njk",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: false,
+        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "imageUrl", widget: "image" }
       - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
@@ -32,6 +37,3 @@ collections:
           options: ["featured", "commercial", "music video", "narrative"],
         }
       - { label: "Details", name: "body", widget: "markdown" }
-tags:
-  - featured
-  - commercial
