@@ -5,6 +5,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
 
+  // Netlify CMS
+  eleventyConfig.addPassthroughCopy("admin");
+
   // Provide our own version of markdown-it to add breaks on newlines
   eleventyConfig.setLibrary("md", markdownIt({
     html: true,
