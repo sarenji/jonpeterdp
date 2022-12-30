@@ -1,4 +1,4 @@
-{% for post in collections[tag] %}
+{% for post in collections.all | postsForTag(tag) %}
   <div class="cover-photo">
     <div class="cover-photo--overflow">
         <img alt="" src="{{ post.data.imageUrl }}" />

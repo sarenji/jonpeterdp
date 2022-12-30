@@ -28,4 +28,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("music-video", function(collectionApi) {
     return collectionApi.getFilteredByTag("music-video");
   });
+
+  // Filters
+  eleventyConfig.addFilter("titleify", function(value) {
+    return value
+      .split(/[-_\s]/)
+      .map((part) => part[0].toUpperCase() + part.slice(1))
+      .join(' ');
+  });
+  eleventyConfig.addFilter("postsForTag", function(collection, tag) {
+    return collection.filter((post) => {
+      return post.data.tag === tag;
+    });
+  });
 };

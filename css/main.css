@@ -71,7 +71,6 @@ img {
 
 .cover-photo img {
   display: block;
-  filter: brightness(50%);
 }
 
 @media (prefers-reduced-motion: no-preference) {

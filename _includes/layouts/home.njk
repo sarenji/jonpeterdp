@@ -5,17 +5,18 @@ layout: layouts/base.njk
 
 <header>
     <div class="logo"><a href="/">JON PETER</a></div>
-    <nav aria-label="Main navigation">
+    <nav aria-labelledby="main-nav-header">
+        <h2 id="main-nav-header" class="sr-only">Main navigation</h2>
         {% set currentUrl = page.url %}
-        <ul class="main-nav">
-            <li><a {% if currentUrl === '/' or currentUrl === '/featured/' %}aria-current="true"{% endif %} href="/">Featured</a></li>
+        <ol class="main-nav">
+            <li><a {% if currentUrl === '/' or currentUrl === '/featured/' %}aria-current="true"{% endif %} href="/featured/">Featured</a></li>
             <li><a {% if currentUrl === '/commercial/' %}aria-current="true"{% endif %} href="/commercial/">Commercial</a></li>
             <li><a {% if currentUrl === '/narrative/' %}aria-current="true"{% endif %} href="/narrative/">Narrative</a></li>
             <li><a {% if currentUrl === '/music-video/' %}aria-current="true"{% endif %} href="/music-video/">Music Video</a></li>
             <li><a {% if currentUrl === '/contact/' %}aria-current="true"{% endif %} href="/contact/">Contact</a></li>
-        </ul>
+        </ol>
     </nav>
 </header>
 <main>
-  {{ content | safe }}
+    {{ content | safe }}
 </main>
