@@ -28,6 +28,15 @@ collections:
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Image", name: "imageUrl", widget: "image" }
+      - {
+          label: "Aspect ratio",
+          name: "aspectRatio",
+          hint: "The aspect ratio for the image. Default is 16 by 9.",
+          default: "1.78",
+          widget: "number",
+          value_type: "float",
+          required: false,
+        }
       - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
       - {
           label: "Tags",
