@@ -3,7 +3,7 @@
     <div class="cover-photo--overflow">
         <img alt="" src="{{ post.data.imageUrl }}" />
     </div>
-    <a href="/{{ tag | slugify }}/{{ post.data.title | slugify }}">
+    <a href="{{ post.data.page.url }}">
         <span>
             {{ post.data.title }}
             {% if post.data.subtitle %}
