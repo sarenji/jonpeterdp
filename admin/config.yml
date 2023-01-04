@@ -43,6 +43,6 @@ collections:
           name: "tags",
           widget: "select",
           multiple: true,
-          options: ["featured", "commercial", "music video", "narrative"],
+          options: ["featured", "commercial", "music-video", "narrative"],
         }
       - { label: "Details", name: "body", widget: "markdown" }
