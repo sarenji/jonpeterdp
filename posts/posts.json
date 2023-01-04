@@ -6,5 +6,5 @@
         "alias": "tag",
         "addAllPagesToCollections": true
     },
-    "permalink": "/{{ tag | slugify }}/{{ title | slugify }}/index.html"
+    "permalink": "/{{ tag | slugify }}/{{ title | slugify }}{% if subtitle %}-{{ subtitle | slugify }}{% endif %}/index.html"
 }

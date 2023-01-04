@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByTag("narrative");
   });
   eleventyConfig.addCollection("music-video", function(collectionApi) {
-    return collectionApi.getFilteredByTag("music video");
+    return collectionApi.getFilteredByTag("music-video");
   });
 
   // Filters
