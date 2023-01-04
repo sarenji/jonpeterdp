@@ -50,6 +50,10 @@ body {
   white-space: nowrap;
 }
 
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
 .main-nav [aria-current] {
   font-weight: 700;
   text-decoration: underline;
