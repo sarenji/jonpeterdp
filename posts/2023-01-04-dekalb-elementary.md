@@ -12,3 +12,5 @@ tags:
 
 Dir: Reed Van Dyk\
 DP: Jon Peter
+
+2018 Academy Awards:  Best Live Action Short Nomination
