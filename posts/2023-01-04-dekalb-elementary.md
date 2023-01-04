@@ -8,6 +8,7 @@ tags:
   - narrative
   - featured
 ---
-Dir:  Reed Van Dyk
+# DeKalb Elementary
 
-DP:  Jon Peter
+Dir: Reed Van Dyk\
+DP: Jon Peter
