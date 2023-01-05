@@ -2,7 +2,8 @@
 layout: layouts/post.njk
 uuid: osTprGFfka7w5XfSGGrwJ
 title: Louis Vuitton
-subtitle: Cruise 2019
+subtitle: Cruise
+order: 8
 date: 2023-01-04T19:50:28.034Z
 imageUrl: /img/lv_cruise.jpg
 aspectRatio: 2.4
