@@ -6,9 +6,20 @@ media_folder: "img"
 public_folder: "/img"
 editor:
   preview: false
+files:
+  - name: "featured"
+    label: "Featured list"
+    file: "_data/featured/featured.yml"
+    field:
+      label: "Post"
+      name: "post"
+      widget: "relation"
+      collection: "posts"
+      search_fields: ["title", "subtitle", "uuid"]
+      value_field: "uuid"
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
+    label: "All posts" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
