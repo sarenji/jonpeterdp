@@ -19,6 +19,7 @@ collections:
           widget: "hidden",
           default: "layouts/post.njk",
         }
+      - { label: "UUID", name: "uuid", widget: uuid }
       - { label: "Title", name: "title", widget: "string" }
       - {
           label: "Subtitle",
