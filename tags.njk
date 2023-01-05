@@ -12,4 +12,5 @@ pagination:
   addAllPagesToCollections: true
 ---
 
+{% set posts = collections.all | postsForTag(tag) %}
 {% include "tagList.njk" %}
