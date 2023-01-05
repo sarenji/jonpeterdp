@@ -13,5 +13,5 @@ uuid: 7lPHnsu39M-3fT83dOd1H
 # Bouygues Telecom "Kittens"
 
 Dir. Bo Mirhosseni
-DP. Jon Peter
+DOP. Jon Peter
 Prod Co. Partizan Paris
