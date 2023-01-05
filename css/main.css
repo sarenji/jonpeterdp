@@ -117,6 +117,7 @@ img {
 
 .contact-page {
   background-image: url("/img/L1000747.jpg");
+  background-position: center center;
   background-size: cover;
   color: #fff;
   padding: 4rem 2rem;
