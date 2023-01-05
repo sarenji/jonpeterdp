@@ -3,5 +3,5 @@ title: Jon Peter. Director of Photography
 layout: layouts/home.njk
 ---
 
-{% set posts = collections.all | postsForTag("featured") %}
+{% set posts = collections.all | postsForTag("featured") | pick(featured.featuredPosts) %}
 {% include "tagList.njk" %}

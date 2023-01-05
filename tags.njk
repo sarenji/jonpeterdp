@@ -12,5 +12,6 @@ pagination:
   addAllPagesToCollections: true
 ---
 
-{% set posts = collections.all | postsForTag(tag) %}
+{% set uuids = featured | uuidsForTag(tag) %}
+{% set posts = collections.all | postsForTag(tag) | pick(uuids) %}
 {% include "tagList.njk" %}

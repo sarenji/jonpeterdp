@@ -1,21 +1,63 @@
 backend:
   name: git-gateway
   branch: main
-publish_mode: editorial_workflow
 media_folder: "img"
 public_folder: "/img"
 editor:
   preview: false
 collections:
-  - name: "featuredCollection"
-    label: "Featured posts"
+  - name: "siteData"
+    label: "Site data"
     files:
       - name: "featuredFile"
         label: "Featured posts"
-        file: "_data/featured/featured.yml"
+        file: "_data/featured.json"
+        format: json
         fields:
-          - label: "Order"
+          - label: "Featured"
             name: "featuredPosts"
+            widget: "list"
+            collapsed: false
+            allow_add: true
+            add_to_top: true
+            field:
+              label: "Post"
+              name: "post"
+              widget: "relation"
+              collection: "posts"
+              search_fields: ["title", "subtitle", "uuid"]
+              display_fields: ["title", "subtitle"]
+              value_field: "uuid"
+          - label: "Commercial"
+            name: "commercialPosts"
+            widget: "list"
+            collapsed: false
+            allow_add: true
+            add_to_top: true
+            field:
+              label: "Post"
+              name: "post"
+              widget: "relation"
+              collection: "posts"
+              search_fields: ["title", "subtitle", "uuid"]
+              display_fields: ["title", "subtitle"]
+              value_field: "uuid"
+          - label: "Narrative"
+            name: "narrativePosts"
+            widget: "list"
+            collapsed: false
+            allow_add: true
+            add_to_top: true
+            field:
+              label: "Post"
+              name: "post"
+              widget: "relation"
+              collection: "posts"
+              search_fields: ["title", "subtitle", "uuid"]
+              display_fields: ["title", "subtitle"]
+              value_field: "uuid"
+          - label: "Music Video"
+            name: "musicVideoPosts"
             widget: "list"
             collapsed: false
             allow_add: true

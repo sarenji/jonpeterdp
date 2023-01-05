@@ -58,4 +58,18 @@ module.exports = function(eleventyConfig) {
       return 0;
     });
   });
+  eleventyConfig.addFilter("pick", function(collection, uuids) {
+    return uuids.map((uuid) => {
+      return collection.find((post) => post.data.uuid === uuid);
+    }).filter(Boolean);
+  });
+  eleventyConfig.addFilter("uuidsForTag", function(data, tag) {
+    switch (tag) {
+      case "featured": return data.featuredPosts;
+      case "commercial": return data.commercialPosts;
+      case "music-video": return data.musicVideoPosts;
+      case "narrative": return data.narrativePosts;
+      default: throw new Error(`Could not recognize tag: ${tag}`);
+    }
+  });
 };
