@@ -14,6 +14,6 @@ tags:
 Dir: Reed Van Dyk
 DP: Jon Peter
 
-2018 Academy Awards:  Best Live Action Short Nomination
-2017 Clermont-Ferrand International Short Film Festival: Grand Jury Prize
+2018 Academy Awards: Best Live Action Short Nomination
+2017 Clermont Ferrand: International Grand Prix
 2017 SXSW: Special Jury Recognition in Acting
