@@ -7,16 +7,17 @@ public_folder: "/img"
 editor:
   preview: false
 collections:
-  - name: "featured"
+  - name: "featuredCollection"
     label: "Featured posts"
     files:
-      - name: "featured_posts"
+      - name: "featuredFile"
         label: "Featured posts"
         file: "_data/featured/featured.yml"
         fields:
-          - label: "Posts"
-            name: "posts"
+          - label: "Order"
+            name: "featuredPosts"
             widget: "list"
+            collapsed: false
             allow_add: true
             add_to_top: true
             field:
