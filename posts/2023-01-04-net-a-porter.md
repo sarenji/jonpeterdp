@@ -1,5 +1,6 @@
 ---
 layout: layouts/post.njk
+uuid: ynbUhLYKLrhFbpffl1r2J
 title: Net A Porter
 subtitle: SS19
 date: 2023-01-04T20:20:03.717Z
