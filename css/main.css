@@ -107,8 +107,6 @@ img {
   font-family: var(--font-family-loud);
   font-weight: 600;
   font-size: 1.5rem;
-  /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: clamp(1.1rem, 0.8rem + 1.3333vw, 1.5rem);
   color: #fff;
   text-transform: uppercase;
 }

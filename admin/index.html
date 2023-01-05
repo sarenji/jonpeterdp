@@ -36,29 +36,6 @@
         },
     })
     CMS.registerWidget('uuid', UuidWidget)
-
-    const FeaturedWidget = createClass({
-        handleChange(event) {
-            const separator = this.props.field.get('separator', ', ')
-            this.props.onChange(event.target.checked ? ['featured'] : []);
-        },
-
-        render() {
-            const { value = [], classNameWrapper, forID } = this.props;
-            return h(
-                'input',
-                {
-                    id: forID,
-                    className: classNameWrapper,
-                    type: 'checkbox',
-                    checked: value.length > 0,
-                    onChange: this.handleChange,
-                },
-                value
-            );
-        },
-    })
-    CMS.registerWidget('featured', FeaturedWidget)
   </script>
 </body>
 </html>

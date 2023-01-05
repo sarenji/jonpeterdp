@@ -8,9 +8,9 @@ imageUrl: /img/lv_spirit.jpg
 aspectRatio: 1.78
 vimeoVideoId: 267245547
 tags:
+  - commercial
   - featured
 ---
-
 # Louis Vuitton "Spirit of Travel"
 
 Dir. Maxime Poiblanc

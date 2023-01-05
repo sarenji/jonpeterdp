@@ -1,20 +1,20 @@
 backend:
   name: git-gateway
   branch: main
+publish_mode: editorial_workflow
 media_folder: "img"
 public_folder: "/img"
 editor:
   preview: false
 collections:
-  - name: "dataCollection"
-    label: "Site data"
-    format: json
+  - name: "featuredCollection"
+    label: "Featured posts"
     files:
       - name: "featuredFile"
         label: "Featured posts"
-        file: "_data/featured.json"
+        file: "_data/featured/featured.yml"
         fields:
-          - label: "Featured"
+          - label: "Order"
             name: "featuredPosts"
             widget: "list"
             collapsed: false
@@ -28,51 +28,9 @@ collections:
               search_fields: ["title", "subtitle", "uuid"]
               display_fields: ["title", "subtitle"]
               value_field: "uuid"
-          - label: "Commercial"
-            name: "commercialPosts"
-            widget: "list"
-            collapsed: false
-            allow_add: true
-            add_to_top: true
-            field:
-              label: "Post"
-              name: "post"
-              widget: "relation"
-              collection: "posts"
-              search_fields: ["title", "subtitle", "uuid"]
-              display_fields: ["title", "subtitle"]
-              value_field: "uuid"
-          - label: "Narrative"
-            name: "narrativePosts"
-            widget: "list"
-            collapsed: false
-            allow_add: true
-            add_to_top: true
-            field:
-              label: "Post"
-              name: "post"
-              widget: "relation"
-              collection: "posts"
-              search_fields: ["title", "subtitle", "uuid"]
-              display_fields: ["title", "subtitle"]
-              value_field: "uuid"
-          - label: "Music Video"
-            name: "musicVideoPosts"
-            widget: "list"
-            collapsed: false
-            allow_add: true
-            add_to_top: true
-            field:
-              label: "Post"
-              name: "post"
-              widget: "relation"
-              collection: "posts"
-              search_fields: ["title", "subtitle", "uuid"]
-              display_fields: ["title", "subtitle"]
-              value_field: "uuid"
-  - name: "commercial" # Used in routes, e.g., /admin/collections/blog
-    label: "Commercial" # Used in the UI
-    folder: "posts/commercial" # The path to the folder where the documents are stored
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "All posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -108,85 +66,11 @@ collections:
           required: false,
         }
       - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
-      - { label: "Featured", name: "tags", widget: "featured" }
-      - { label: "Details", name: "body", widget: "markdown" }
-  - name: "music-video" # Used in routes, e.g., /admin/collections/blog
-    label: "Music video" # Used in the UI
-    folder: "posts/musicVideo" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
       - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "layouts/post.njk",
+          label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          options: ["featured", "commercial", "music-video", "narrative"],
         }
-      - { label: "UUID", name: "uuid", widget: uuid }
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Subtitle",
-          name: "subtitle",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Order",
-          name: "order",
-          hint: "Higher numbers appear earlier in the list. They do not have to be consecutive.",
-          widget: "number",
-        }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "imageUrl", widget: "image" }
-      - {
-          label: "Aspect ratio",
-          name: "aspectRatio",
-          hint: "The aspect ratio for the image. Default is 16 by 9.",
-          default: "1.78",
-          widget: "number",
-          value_type: "float",
-          required: false,
-        }
-      - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
-      - { label: "Featured", name: "tags", widget: "featured" }
-      - { label: "Details", name: "body", widget: "markdown" }
-  - name: "narrative" # Used in routes, e.g., /admin/collections/blog
-    label: "Narrative" # Used in the UI
-    folder: "posts/narrative" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "layouts/post.njk",
-        }
-      - { label: "UUID", name: "uuid", widget: uuid }
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Subtitle",
-          name: "subtitle",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Order",
-          name: "order",
-          hint: "Higher numbers appear earlier in the list. They do not have to be consecutive.",
-          widget: "number",
-        }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "imageUrl", widget: "image" }
-      - {
-          label: "Aspect ratio",
-          name: "aspectRatio",
-          hint: "The aspect ratio for the image. Default is 16 by 9.",
-          default: "1.78",
-          widget: "number",
-          value_type: "float",
-          required: false,
-        }
-      - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
-      - { label: "Featured", name: "tags", widget: "featured" }
       - { label: "Details", name: "body", widget: "markdown" }
