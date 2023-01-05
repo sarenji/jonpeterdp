@@ -120,6 +120,7 @@ img {
   background-size: cover;
   color: #fff;
   padding: 4rem 2rem;
+  text-align: center;
 }
 
 .contact-page a {
@@ -150,15 +151,14 @@ img {
   margin-top: 4rem;
 }
 
-.contact-page--grid {
-  text-align: center;
-}
-
 @media (min-width: 40em) {
+  .contact-page {
+    text-align: left;
+  }
+
   .contact-page--grid {
     display: grid;
     grid-template-columns: 4fr 3fr 3fr;
-    text-align: left;
     gap: 1rem;
   }
 }
