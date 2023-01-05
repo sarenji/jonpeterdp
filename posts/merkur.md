@@ -1,18 +1,16 @@
 ---
 title: Merkur
 subtitle: More Than You Expect
+date: 2023-01-05T01:15:29.708Z
+imageUrl: /img/merkur.jpg
+aspectRatio: 1.78
+vimeoVideoId: 162760816
 tags:
   - featured
   - commercial
-imageUrl: /img/merkur.jpg
-vimeoVideoId: 162760816
 ---
-
 # Merkur “More Than You Expect”
 
 Dir. Bo Mirhosseni
-DP: Jon Peter
+DOP: Jon Peter
 Prod Co: Partizan Berlin
-Awards: 2018 Academy Award nomination - Best Live Action Short Film
-2017 Clermont-Ferrand International Short Film Festival (Grand Jury Prize)
-2017 SXSW (Special Jury Recognition in Acting)
