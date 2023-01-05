@@ -6,18 +6,20 @@ media_folder: "img"
 public_folder: "/img"
 editor:
   preview: false
-files:
-  - name: "featured"
-    label: "Featured list"
-    file: "_data/featured/featured.yml"
-    field:
-      label: "Post"
-      name: "post"
-      widget: "relation"
-      collection: "posts"
-      search_fields: ["title", "subtitle", "uuid"]
-      value_field: "uuid"
 collections:
+  - name: "featured"
+    label: "Featured order"
+    files:
+      - name: "featured_posts"
+        label: "Featured posts"
+        file: "_data/featured/featured.yml"
+        field:
+          label: "Post"
+          name: "post"
+          widget: "relation"
+          collection: "posts"
+          search_fields: ["title", "subtitle", "uuid"]
+          value_field: "uuid"
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "All posts" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
