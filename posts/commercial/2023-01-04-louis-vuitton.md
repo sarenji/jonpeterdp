@@ -9,9 +9,9 @@ imageUrl: /img/lv_cruise.jpg
 aspectRatio: 2.4
 vimeoVideoId: 299088196
 tags:
-  - commercial
   - featured
 ---
+
 # Louis Vuitton "Cruise 2019"
 
 Dir. Maxime Poiblanc

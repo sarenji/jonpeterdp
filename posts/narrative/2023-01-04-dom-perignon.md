@@ -7,9 +7,9 @@ date: 2023-01-04T21:28:48.390Z
 imageUrl: /img/dom_perignon.png
 vimeoVideoId: 583586597
 tags:
-  - narrative
   - featured
 ---
+
 # Dom Perignon
 
 Dir. Bret Easton Ellis

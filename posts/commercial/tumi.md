@@ -7,8 +7,8 @@ aspectRatio: 1.78
 vimeoVideoId: 185726880
 tags:
   - featured
-  - commercial
 ---
+
 # Tumi "Nick Fouquet"
 
 Dir. Jamie Muir

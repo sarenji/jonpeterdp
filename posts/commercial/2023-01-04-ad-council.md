@@ -8,9 +8,9 @@ imageUrl: /img/adopt_kids.jpg
 aspectRatio: 1.78
 vimeoVideoId: 742863699
 tags:
-  - commercial
   - featured
 ---
+
 # Ad Council "Lucky Ones"
 
 Dir. Meghan Frederico
