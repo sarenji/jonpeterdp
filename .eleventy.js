@@ -39,6 +39,23 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postsForTag", function(collection, tag) {
     return collection.filter((post) => {
       return post.data.tag === tag;
+    }).sort((a, b) => {
+      const aOrder = a.data.order ?? 0;
+      const bOrder = b.data.order ?? 0;
+      if (aOrder < bOrder) {
+        return -1;
+      } else if (aOrder < bOrder) {
+        return -1;
+      }
+
+      const aDate = a.data.date;
+      const bDate = b.data.date;
+      if (aDate < bDate) {
+        return -1;
+      } else if (aDate < bDate) {
+        return 1;
+      }
+      return 0;
     });
   });
 };
