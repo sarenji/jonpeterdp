@@ -8,18 +8,24 @@ editor:
   preview: false
 collections:
   - name: "featured"
-    label: "Featured order"
+    label: "Featured posts"
     files:
       - name: "featured_posts"
         label: "Featured posts"
         file: "_data/featured/featured.yml"
         fields:
-          - label: "Post"
-            name: "post"
-            widget: "relation"
-            collection: "posts"
-            search_fields: ["title", "subtitle", "uuid"]
-            value_field: "uuid"
+          - label: "Posts"
+            name: "posts"
+            allow_add: true
+            add_to_top: true
+            field:
+              label: "Post"
+              name: "post"
+              widget: "relation"
+              collection: "posts"
+              search_fields: ["title", "subtitle", "uuid"]
+              display_fields: ["title", "subtitle"]
+              value_field: "uuid"
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "All posts" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
