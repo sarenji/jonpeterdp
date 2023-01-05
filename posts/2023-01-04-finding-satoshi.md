@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: Finding Satoshi
 date: 2023-01-04T21:01:58.594Z
 imageUrl: /img/finding_satoshi.jpg
+aspectRatio: 1.78
 vimeoVideoId: 754863222
 tags:
   - narrative
@@ -11,7 +12,7 @@ tags:
 
 Dir. Laurent Barthelemy
 DOP. Jon Peter
-Prod Co. Mount Melvil
+Prod Co. NHK and Mount Melvil
 Narrator. Willem Dafoe
 
 2022 Galaxy Audience Award
