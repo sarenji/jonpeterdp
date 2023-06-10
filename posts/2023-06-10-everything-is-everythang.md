@@ -17,4 +17,4 @@ DOP. Jon Peter
 Exhibitioning at Museum of Contemporary Art Antwerp\
 May 26 - June 25, 2023
 
-* please reach out for the password to view *
+*please reach out for the password to view*
