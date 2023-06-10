@@ -14,7 +14,7 @@ tags:
 Dir. Marc Bertel\
 DOP. Jon Peter
 
-Exhibitioning at Museum of Contemporary Art Antwerp\
-May 26 - June 25, 2023
+Please contact me or my agent for the password or visit:
 
-*please reach out for the password to view*
+Museum of Contemporary Art Antwerp\
+May 26 - June 25, 2023
