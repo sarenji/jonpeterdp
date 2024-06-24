@@ -14,4 +14,7 @@ tags:
 Dir. Marc Bertel\
 DOP. Jon Peter
 
-Please contact me or my agent for the password
+Please contact me or my agent for the password or visit:
+
+Museum of Contemporary Art Antwerp\
+May 26 - June 25, 2023
