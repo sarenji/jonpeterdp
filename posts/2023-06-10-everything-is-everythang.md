@@ -14,7 +14,10 @@ tags:
 Dir. Marc Bertel\
 DOP. Jon Peter
 
-Please contact me or my agent for the password or visit:
+EXHIBITIONS:
+
+Steirischer Herbst Festival\
+September 24 - October 18, 2026
 
 Museum of Contemporary Art Antwerp\
 May 26 - June 25, 2023
