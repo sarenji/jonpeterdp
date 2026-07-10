@@ -14,10 +14,10 @@ tags:
 Dir. Marc Bertel\
 DOP. Jon Peter
 
-EXHIBITIONS:
-
 Steirischer Herbst Festival\
-September 24 - October 18, 2026
+RHIZOM – Annenstraße 52, 8020 Graz, Austria
+October 8 - 18, 2026
+12.00 - 18.00h
 
 Museum of Contemporary Art Antwerp\
 May 26 - June 25, 2023
