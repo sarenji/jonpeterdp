@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 uuid: ijefNqrTJv-CmqBb6B1Vd
-title: Everything is Everythang
+title: Watts
 order: 1
 date: 2023-06-10T21:35:33.557Z
 imageUrl: /img/everything-is-everythang-thumbnail.jpg
@@ -11,7 +11,7 @@ tags:
   - featured
   - narrative
 ---
-# Everything is Everythang
+# Watts "Everything is Everythang"
 
 
 Dir. Marc Bertel\
