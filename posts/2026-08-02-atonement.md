@@ -15,8 +15,8 @@ tags:
 Dir. Reed Van Dyk
 DOP. Jon Peter
 
-Kino Lorber, Fall 2026 (North America)
-ARP Selection, Winter 2026 (France)
+Kino Lorber, Fall 2026 release (North America)
+ARP Selection, Winter 2026 release (France)
 
 2026 Cannes Film Festival, Directors' Fortnight
 2026 Toronto International Film Festival
