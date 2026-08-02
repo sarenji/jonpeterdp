@@ -10,7 +10,11 @@ layout: layouts/base.njk
     </header>
     <main>
         <div class="embed-container" style="aspect-ratio: {% if aspectRatio %}{{ aspectRatio }}{% else %}16 / 9{% endif %}">
+            {% if vimeoVideoId %}
             <iframe src="https://player.vimeo.com/video/{{ vimeoVideoId }}?color=FFEDA3&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            {% else %}
+            <img src="{{ imageUrl }}" alt="{{ title }}">
+            {% endif %}
         </div>
         <div class="post-page--details">
             {{ content | safe }}

@@ -107,7 +107,13 @@ collections:
           value_type: "float",
           required: false,
         }
-      - { label: "Vimeo ID", name: "vimeoVideoId", widget: "number" }
+      - {
+          label: "Vimeo ID",
+          name: "vimeoVideoId",
+          hint: "Optional. Leave blank to publish this entry as an image; add a Vimeo ID later to turn it into a video.",
+          widget: "number",
+          required: false,
+        }
       - {
           label: "Tags",
           name: "tags",

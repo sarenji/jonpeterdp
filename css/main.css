@@ -198,6 +198,13 @@ img {
   height: 100%;
 }
 
+.embed-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .close-button {
   color: inherit;
   width: 2.5rem;
