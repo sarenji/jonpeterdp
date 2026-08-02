@@ -6,7 +6,7 @@ imageUrl: /img/dekalb_elementary.jpg
 aspectRatio: 1.78
 vimeoVideoId: 754470506
 tags:
-  - narrative
+  - long-form
   - featured
 uuid: naB8OL5bfghvu89hMkosb
 ---

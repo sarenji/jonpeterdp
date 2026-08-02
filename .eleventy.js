@@ -22,8 +22,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("commercial", function(collectionApi) {
     return collectionApi.getFilteredByTag("commercial");
   });
-  eleventyConfig.addCollection("narrative", function(collectionApi) {
-    return collectionApi.getFilteredByTag("narrative");
+  eleventyConfig.addCollection("long-form", function(collectionApi) {
+    return collectionApi.getFilteredByTag("long-form");
   });
   eleventyConfig.addCollection("music-video", function(collectionApi) {
     return collectionApi.getFilteredByTag("music-video");
@@ -68,7 +68,7 @@ module.exports = function(eleventyConfig) {
       case "featured": return data.featuredPosts;
       case "commercial": return data.commercialPosts;
       case "music-video": return data.musicVideoPosts;
-      case "narrative": return data.narrativePosts;
+      case "long-form": return data.longFormPosts;
       default: throw new Error(`Could not recognize tag: ${tag}`);
     }
   });

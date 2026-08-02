@@ -8,7 +8,7 @@ imageUrl: /img/atonement-hero-image-v2-jpg.jpg
 aspectRatio: 1.85
 tags:
   - featured
-  - narrative
+  - long-form
 ---
 # Atonement
 

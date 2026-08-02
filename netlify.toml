@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/narrative/*"
+  to = "/long-form/:splat"
+  status = 302
+  force = true

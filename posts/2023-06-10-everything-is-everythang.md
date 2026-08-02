@@ -9,7 +9,7 @@ aspectRatio: "1.78"
 vimeoVideoId: 1163381303
 tags:
   - featured
-  - narrative
+  - long-form
 ---
 # Watts "Everything is Everythang"
 

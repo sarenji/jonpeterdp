@@ -7,7 +7,7 @@ imageUrl: /img/finding_satoshi.jpg
 aspectRatio: 1.78
 vimeoVideoId: 754863222
 tags:
-  - narrative
+  - long-form
 ---
 # Finding Satoshi
 
@@ -18,4 +18,3 @@ Narrator. Willem Dafoe
 
 2022 Galaxy Audience Award
 2022 Copenhagen Film Festival: Best Feature Documentary
-

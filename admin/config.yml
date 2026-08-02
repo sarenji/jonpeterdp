@@ -42,8 +42,8 @@ collections:
               search_fields: ["title", "subtitle", "uuid"]
               display_fields: ["title", "subtitle"]
               value_field: "uuid"
-          - label: "Narrative"
-            name: "narrativePosts"
+          - label: "Long Form"
+            name: "longFormPosts"
             widget: "list"
             collapsed: false
             allow_add: true
@@ -119,6 +119,10 @@ collections:
           name: "tags",
           widget: "select",
           multiple: true,
-          options: ["featured", "commercial", "music-video", "narrative"],
+          options:
+            - { label: "Featured", value: "featured" }
+            - { label: "Commercial", value: "commercial" }
+            - { label: "Music Video", value: "music-video" }
+            - { label: "Long Form", value: "long-form" }
         }
       - { label: "Details", name: "body", widget: "markdown" }
