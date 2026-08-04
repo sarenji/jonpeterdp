@@ -1,4 +1,18 @@
 const markdownIt = require("markdown-it");
+const order = require("./_data/order.json");
+const orderedIds = new Set(Object.values(order).flat());
+
+function orderCollection(collection, uuids) {
+  const positions = new Map(uuids.map((uuid, index) => [uuid, index]));
+  return [...collection].sort((a, b) => {
+    const aPosition = positions.get(a.data.uuid);
+    const bPosition = positions.get(b.data.uuid);
+    if (aPosition !== undefined && bPosition !== undefined) return aPosition - bPosition;
+    if (aPosition !== undefined) return -1;
+    if (bPosition !== undefined) return 1;
+    return 0;
+  });
+}
 
 module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
@@ -16,17 +30,23 @@ module.exports = function(eleventyConfig) {
   }));
 
   // Collections
+  eleventyConfig.addCollection("published", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("posts/*.md")
+      .filter((post) => orderedIds.has(post.data.uuid));
+  });
+  eleventyConfig.addCollection("categories", function(collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("posts/*.md")
+      .filter((post) => orderedIds.has(post.data.uuid))
+    const categories = [...new Set(posts.map((post) => post.data.category))]
+      .filter(Boolean)
+    if (order.featuredPosts.length) {
+      categories.push("featured");
+    }
+    return categories.sort();
+  });
   eleventyConfig.addCollection("featured", function(collectionApi) {
-    return collectionApi.getFilteredByTag("featured");
-  });
-  eleventyConfig.addCollection("commercial", function(collectionApi) {
-    return collectionApi.getFilteredByTag("commercial");
-  });
-  eleventyConfig.addCollection("long-form", function(collectionApi) {
-    return collectionApi.getFilteredByTag("long-form");
-  });
-  eleventyConfig.addCollection("music-video", function(collectionApi) {
-    return collectionApi.getFilteredByTag("music-video");
+    return collectionApi.getFilteredByGlob("posts/*.md")
+      .filter((post) => order.featuredPosts.includes(post.data.uuid));
   });
 
   // Filters
@@ -36,40 +56,24 @@ module.exports = function(eleventyConfig) {
       .map((part) => part[0].toUpperCase() + part.slice(1))
       .join(' ');
   });
-  eleventyConfig.addFilter("postsForTag", function(collection, tag) {
+  eleventyConfig.addFilter("postsForCategory", function(collection, category) {
     return collection.filter((post) => {
-      return post.data.tag === tag;
+      return post.data.category === category;
     }).sort((a, b) => {
       const aOrder = a.data.order ?? 0;
       const bOrder = b.data.order ?? 0;
-      if (aOrder < bOrder) {
-        return -1;
-      } else if (aOrder < bOrder) {
-        return -1;
-      }
-
-      const aDate = a.data.date;
-      const bDate = b.data.date;
-      if (aDate < bDate) {
-        return -1;
-      } else if (aDate < bDate) {
-        return 1;
-      }
-      return 0;
+      return bOrder - aOrder || new Date(b.data.date) - new Date(a.data.date);
     });
   });
-  eleventyConfig.addFilter("pick", function(collection, uuids) {
-    return uuids.map((uuid) => {
-      return collection.find((post) => post.data.uuid === uuid);
-    }).filter(Boolean);
+  eleventyConfig.addFilter("orderedBy", function(collection, uuids) {
+    return orderCollection(collection, uuids);
   });
-  eleventyConfig.addFilter("uuidsForTag", function(data, tag) {
-    switch (tag) {
-      case "featured": return data.featuredPosts;
-      case "commercial": return data.commercialPosts;
-      case "music-video": return data.musicVideoPosts;
-      case "long-form": return data.longFormPosts;
-      default: throw new Error(`Could not recognize tag: ${tag}`);
-    }
+  eleventyConfig.addFilter("orderedByCategory", function(collection, ordering, category) {
+    const key = {
+      commercial: "commercialPosts",
+      "long-form": "longFormPosts",
+      "music-video": "musicVideoPosts",
+    }[category];
+    return key ? orderCollection(collection, order[key]) : collection;
   });
 };

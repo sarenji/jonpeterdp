@@ -1,0 +1,19 @@
+---
+eleventyComputed:
+  title: Jon Peter. {{ category | titleify }}
+permalink: /{{ category | slugify }}/
+layout: layouts/home.njk
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+  addAllPagesToCollections: true
+---
+
+{% if category === "featured" %}
+  {% set posts = collections.featured | orderedBy(order.featuredPosts) %}
+{% else %}
+  {% set posts = collections.published | postsForCategory(category) %}
+  {% set posts = posts | orderedByCategory(order, category) %}
+{% endif %}
+{% include "categoryList.njk" %}

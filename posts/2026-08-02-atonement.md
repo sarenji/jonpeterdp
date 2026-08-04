@@ -2,13 +2,10 @@
 layout: layouts/post.njk
 uuid: 88hXBH9yERIWf0ROqU0bW
 title: Atonement
-order: 1
 date: 2026-08-02T22:36:10.520Z
 imageUrl: /img/atonement-hero-image-v2-jpg.jpg
 aspectRatio: 1.85
-tags:
-  - featured
-  - long-form
+category: long-form
 ---
 # Atonement
 

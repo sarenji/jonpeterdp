@@ -9,9 +9,9 @@ collections:
   - name: "siteData"
     label: "Site data"
     files:
-      - name: "featuredFile"
-        label: "Featured posts"
-        file: "_data/featured.json"
+      - name: "orderFile"
+        label: "Post ordering"
+        file: "_data/order.json"
         format: json
         fields:
           - label: "Featured"
@@ -115,12 +115,10 @@ collections:
           required: false,
         }
       - {
-          label: "Tags",
-          name: "tags",
+          label: "Category",
+          name: "category",
           widget: "select",
-          multiple: true,
           options: [
-            { label: "Featured", value: "featured" },
             { label: "Commercial", value: "commercial" },
             { label: "Music Video", value: "music-video" },
             { label: "Long Form", value: "long-form" },

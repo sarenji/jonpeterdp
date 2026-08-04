@@ -1,10 +1,4 @@
 {
     "layout": "layouts/post.njk",
-    "pagination": {
-        "data": "tags",
-        "size": 1,
-        "alias": "tag",
-        "addAllPagesToCollections": true
-    },
-    "permalink": "/{{ tag | slugify }}/{{ title | slugify }}{% if subtitle %}-{{ subtitle | slugify }}{% endif %}/index.html"
+    "permalink": "/{{ category | slugify }}/{{ title | slugify }}{% if subtitle %}-{{ subtitle | slugify }}{% endif %}/index.html"
 }

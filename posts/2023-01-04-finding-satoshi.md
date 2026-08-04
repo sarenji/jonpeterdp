@@ -6,8 +6,7 @@ date: 2023-01-04T21:01:58.594Z
 imageUrl: /img/finding_satoshi.jpg
 aspectRatio: 1.78
 vimeoVideoId: 754863222
-tags:
-  - long-form
+category: long-form
 ---
 # Finding Satoshi
 

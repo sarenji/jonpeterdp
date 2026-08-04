@@ -5,9 +5,7 @@ date: 2023-01-05T01:15:29.708Z
 imageUrl: /img/merkur.jpg
 aspectRatio: 1.78
 vimeoVideoId: 162760816
-tags:
-  - featured
-  - commercial
+category: commercial
 uuid: lzvZmVURVfYcK4t4UhHfQ
 ---
 

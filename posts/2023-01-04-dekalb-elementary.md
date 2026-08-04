@@ -5,9 +5,7 @@ date: 2023-01-04T00:01:58.640Z
 imageUrl: /img/dekalb_elementary.jpg
 aspectRatio: 1.78
 vimeoVideoId: 754470506
-tags:
-  - long-form
-  - featured
+category: long-form
 uuid: naB8OL5bfghvu89hMkosb
 ---
 # DeKalb Elementary

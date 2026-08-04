@@ -6,8 +6,7 @@ subtitle: SS19
 date: 2023-01-04T20:20:03.717Z
 imageUrl: /img/net_a_porter.jpg
 vimeoVideoId: 320319716
-tags:
-  - commercial
+category: commercial
 ---
 # Net A Porter SS19
 
