@@ -119,10 +119,11 @@ collections:
           name: "tags",
           widget: "select",
           multiple: true,
-          options:
-            - { label: "Featured", value: "featured" }
-            - { label: "Commercial", value: "commercial" }
-            - { label: "Music Video", value: "music-video" }
-            - { label: "Long Form", value: "long-form" }
+          options: [
+            { label: "Featured", value: "featured" },
+            { label: "Commercial", value: "commercial" },
+            { label: "Music Video", value: "music-video" },
+            { label: "Long Form", value: "long-form" },
+          ],
         }
       - { label: "Details", name: "body", widget: "markdown" }
