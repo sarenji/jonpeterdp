@@ -75,6 +75,8 @@ img {
 
 .cover-photo img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,4 +1,6 @@
 const markdownIt = require("markdown-it");
+const path = require("path");
+const { default: Image, generateHTML } = require("@11ty/eleventy-img");
 const order = require("./_data/order.json");
 const orderedIds = new Set(Object.values(order).flat());
 
@@ -21,6 +23,22 @@ module.exports = function(eleventyConfig) {
 
   // Netlify CMS
   eleventyConfig.addPassthroughCopy("admin");
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt) {
+    const inputPath = path.join(__dirname, src.replace(/^\//, ""));
+    const outputDir = path.join(__dirname, "_site", "img", "optimized");
+    const metadata = await Image(inputPath, {
+      widths: [800, 1600],
+      formats: ["webp"],
+      outputDir,
+      urlPath: "/img/optimized/",
+    });
+    return generateHTML(metadata, {
+      alt: alt || "",
+      loading: "lazy",
+      decoding: "async",
+    });
+  });
 
   // Provide our own version of markdown-it to add breaks on newlines
   eleventyConfig.setLibrary("md", markdownIt({

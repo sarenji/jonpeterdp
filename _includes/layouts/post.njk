@@ -13,7 +13,7 @@ layout: layouts/base.njk
             {% if vimeoVideoId %}
             <iframe src="https://player.vimeo.com/video/{{ vimeoVideoId }}?color=FFEDA3&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             {% else %}
-            <img src="{{ imageUrl }}" alt="{{ title }}">
+            {% image imageUrl, title %}
             {% endif %}
         </div>
         <div class="post-page--details">

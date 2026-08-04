@@ -1,7 +1,7 @@
 {% for post in posts %}
   <div class="cover-photo">
     <div class="cover-photo--overflow">
-        <img alt="" src="{{ post.data.imageUrl }}" />
+        {% image post.data.imageUrl, post.data.title %}
     </div>
     <a href="{{ post.data.page.url }}">
         <span>
