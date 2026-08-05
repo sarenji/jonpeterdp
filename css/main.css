@@ -41,7 +41,7 @@ body {
 
 .main-nav li {
   padding: 0.5rem 1rem;
-  padding: 0.5rem clamp(0.5rem, calc(2vw - 0.3rem), 1rem);
+  padding: 0.5rem clamp(0.42rem, calc(2vw - 0.3rem), 1rem);
 }
 
 .main-nav a {
